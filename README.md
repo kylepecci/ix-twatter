@@ -303,9 +303,7 @@ You should see something like this:
 A user was created, we have their information and a *token*. 
 More on this *token* business later though! 
 
-![alt text](https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif "Logo Title Text 1")
-
-
+![mind_blown](https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif "Mind is blown")
 
 Now your turn!
 
