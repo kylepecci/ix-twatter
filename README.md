@@ -303,7 +303,11 @@ You should see something like this:
 A user was created, we have their information and a *token*. 
 More on this *token* business later though! 
 
-<img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" >
+
+
+<p align="center">
+  <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Bundle Analyzer example" width="650" height="335">
+</p>
 
 
 Now your turn!
