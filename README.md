@@ -20,6 +20,7 @@ Installing Homebrew is effortless, open Terminal and enter : (MAC)
 Note: Homebrew will download and install Command Line Tools for Xcode 8.0 as part of the installation process.
 
 For windows users: https://dev.mysql.com/doc/workbench/en/wb-installing-windows.html
+
 (let me know if you run into issues Max ;))
 
 
@@ -32,6 +33,7 @@ Install brew services first : `brew tap homebrew/services`
 Load and start the MySQL service : `brew services start mysql`.
 Expected output : Successfully started mysql (label: homebrew.mxcl.mysql)
 
+(Max, good luck ma man.)
 
 ### Install Docker
 
@@ -49,7 +51,7 @@ https://store.docker.com/editions/community/docker-ce-desktop-windows
 in a new terminal window, CD into your server, install dependencies and deploy prisma.
 
 0. Globally install prisma and graphql-cli by running `npm insnstall -g prisma graphql-cli`.
-1. `cd ix-twatter-server/prisma`
+1. `cd server/prisma`
 2. run `yarn` to install depencies.
 3. run `prisma deploy` to deploy prisma.
 4. CD back into the server directory by running `cd ..` to go a directory up.
@@ -59,7 +61,7 @@ Now go ahead and run `yarn dev` and you should see your playground 🍾
 
 ### Get the front-end up and running
 
-1. go into your front-end directory by doing `cd ix-twatter-client`
+1. go into your front-end directory by doing `cd client`
 2. install dependencies by running `yarn`
 3. run the app by running `yarn start`
 
@@ -95,3 +97,35 @@ We're building a stripped down and simplified version of twitter. To be clear, t
 - Following.
 - Uploading a profile picture. (BONUS FEATURE! 🥓)
 
+First, let's start by defining a User type. Our app has users, just like twitter's 😎.
+
+```gql
+type User {
+  id: ID! @unique
+  email: String! @unique
+  password: String!
+  name: String!
+  picture: String
+  tweets: [Tweet!]!
+}
+```
+
+Most of these properties should be self explanatory, our user will have an ID and it's unique. By adding the `@unique` directive to our property, we let Prisma know that there can not be more than 1 user with the same ID. We do the same thing for emails. Also, our user has a bunch of tweets, so we attach a `tweets` property that will have an array of tweets, as you can see here : `tweets: [Tweet!]!`
+
+Finally, our User also has an email and password because they will need to `authenticate` and log in. We don't want no anonymous tweets! This isn't blockchain.
+
+Hold on! We almost forgot to create the Tweet type. Let's make sure this is defined:
+
+```gql
+type Tweet {
+  id: ID! @unique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  text: String!
+  author: User!
+}
+```
+
+In this case, the main point is that a Tweet is owned by a User and we define that relationship by giving the Tweet type an `author` property that links to the `User` type.
+
+Now, in order to tell Prisma to make these changes run `prisma deploy` in your terminal. (make sure you are in the server repo)
