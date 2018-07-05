@@ -306,7 +306,7 @@ More on this *token* business later though!
 
 
 <p align="center">
-  <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" alt="Bundle Analyzer example" width="650" height="335">
+  <img src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif" alt="mind_blown" width="650" height="335">
 </p>
 
 
