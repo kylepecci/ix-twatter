@@ -22,16 +22,13 @@ For windows users: https://dev.mysql.com/doc/workbench/en/wb-installing-windows.
 
 (let me know if you run into issues Max ;))
 
-### Install MySQL
+### Install PostgreSQL
 
-To install MySQL enter : `brew install mysql`
 
-Install brew services first : `brew tap homebrew/services`
+Follow the instructions here:
 
-Load and start the MySQL service : `brew services start mysql`.
-Expected output : Successfully started mysql (label: homebrew.mxcl.mysql)
+https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb
 
-(Max, good luck ma man.)
 
 ### Install Docker
 
@@ -47,11 +44,11 @@ https://store.docker.com/editions/community/docker-ce-desktop-windows
 
 in a new terminal window, CD into your server, install dependencies and deploy prisma.
 
-0.  Globally install prisma and graphql-cli by running `npm insnstall -g prisma graphql-cli`.
-1.  `cd server/prisma`
-1.  run `yarn install` to install depencies.
-1.  run `prisma deploy` to deploy prisma.
-1.  CD back into the server directory by running `cd ..` to go a directory up.
+1.  Globally install prisma and graphql-cli by running `npm insnstall -g prisma graphql-cli`.
+2.  `cd server/prisma`
+3.  run `yarn install` to install depencies.
+4.  run `prisma deploy` to deploy prisma.
+5.  CD back into the server directory by running `cd ..` to go a directory up.
 
 Now go ahead and run `yarn dev` and you should see your playground 🍾
 
