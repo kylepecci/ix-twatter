@@ -24,11 +24,9 @@ For windows users: https://dev.mysql.com/doc/workbench/en/wb-installing-windows.
 
 ### Install PostgreSQL
 
-
 Follow the instructions here:
 
 https://www.codementor.io/engineerapart/getting-started-with-postgresql-on-mac-osx-are8jcopb
-
 
 ### Install Docker
 
@@ -45,10 +43,13 @@ https://store.docker.com/editions/community/docker-ce-desktop-windows
 in a new terminal window, CD into your server, install dependencies and deploy prisma.
 
 1.  Globally install prisma and graphql-cli by running `npm insnstall -g prisma graphql-cli`.
-2.  `cd server/prisma`
+2.  `cd server`
 3.  run `yarn install` to install depencies.
-4.  run `prisma deploy` to deploy prisma.
-5.  CD back into the server directory by running `cd ..` to go a directory up.
+4.  cd into `cd prisma`
+5.  run `docker-compose up -d` to start up the docker containers.
+6.  cd back into the server directory with `cd ..`
+7.  run `prisma deploy` to deploy prisma.
+8.  CD back into the server directory by running `cd ..` to go a directory up.
 
 Now go ahead and run `yarn dev` and you should see your playground 🍾
 
