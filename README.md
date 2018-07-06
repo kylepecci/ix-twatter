@@ -49,7 +49,7 @@ in a new terminal window, CD into your server, install dependencies and deploy p
 
 0.  Globally install prisma and graphql-cli by running `npm insnstall -g prisma graphql-cli`.
 1.  `cd server/prisma`
-1.  run `yarn` to install depencies.
+1.  run `yarn install` to install depencies.
 1.  run `prisma deploy` to deploy prisma.
 1.  CD back into the server directory by running `cd ..` to go a directory up.
 
